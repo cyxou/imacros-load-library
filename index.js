@@ -2,13 +2,11 @@
 
 /* global Components */
 
-if (!XMLHttpRequest) {
-  try {
-    Components.utils.importGlobalProperties(['XMLHttpRequest']);
-  } catch (e) {
-    // Exeption may occur only outside of the Firefox Sandbox environment
-    // Just swallow it
-  }
+try {
+  Components.utils.importGlobalProperties(['XMLHttpRequest']);
+} catch (e) {
+  // Exeption may occur only outside of the Firefox Sandbox environment
+  // Just swallow it
 }
 
 /**
