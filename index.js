@@ -22,7 +22,7 @@ module.exports = function(url, context) {
   xhr.addEventListener('load', function() {
     if (xhr.status >= 200 && xhr.readyState === 4) {
       eval.call(context, xhr.responseText);
-      window.console.log('Script loaded from url: ' + url);
+      window.console.log('Script successfuly loaded from url: ' + url);
     }
   });
 
