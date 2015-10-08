@@ -1,7 +1,6 @@
 'use strict';
 
 /* global Components */
-var clone = require('clone');
 
 try {
   Components.utils.importGlobalProperties(['XMLHttpRequest']);
@@ -29,7 +28,7 @@ module.exports = function(url, context, objNameToClone) {
 
       // clone object
       if (objNameToClone && isString(objNameToClone))
-        context[objNameToClone] = clone(window[objNameToClone]);
+        context[objNameToClone] = Object.create(window[objNameToClone]);
     }
   });
 
